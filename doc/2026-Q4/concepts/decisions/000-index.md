@@ -11,3 +11,5 @@
 | [network-001](network-001.md) | accepted | 2026-10-06 | Session backends, one protocol each | IPv6, Apple/WMS interop |
 | [standard-001](standard-001.md) | proposed | 2026-10-06 | Byte count of Mixed Data Set chunks | confirm interpretation |
 | [web-001](web-001.md) | accepted | 2026-10-06 | Web MIDI port ids and permissions | Firefox, Edge |
+| [native-001](native-001.md) | accepted | 2026-10-12 | Backends hand input to a native tap on their receive thread (CoreMIDI, Android) | Linux, Windows and network taps; native send; USB/BLE with hardware |
+| [ports-001](ports-001.md) | accepted | 2026-10-12 | Consumers find a re-plugged port by its fingerprint; ids stay per session | Identical devices without serial numbers; CoreMIDI ids with USB hardware |
