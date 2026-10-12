@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Add the native taps and port identity of aud_audio ticket 26
+
+- native-001: backends hand input to a native tap on their receive thread
+- ports-001: consumers find a re-plugged port by its fingerprint
+- A link to the plan of ticket 26 in aud_audio_pm
+
 ## 0.0.1 - 2026-10-07
 
 ### Added
