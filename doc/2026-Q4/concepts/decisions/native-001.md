@@ -5,7 +5,10 @@
 - Canonical source: ticket 26 of aud_audio, the MIDI bridge into the
   audio engine ([plan](https://github.com/audaudio/aud_audio_pm/blob/main/doc/2026-Q4/tickets/2026-10-12-26-bridge-aud-midi-ports-into-the-engine-on-ios-and-android.md), scope 4, decision 1 of its plan review)
 - Open work: the native taps of the Linux, Windows and network backends;
-  a native send path for outputs; USB and BLE checked with hardware
+  a native send path for outputs; the app as a Bluetooth LE MIDI
+  peripheral; checked with a Roland GO:KEYS over USB and BLE on iOS and
+  Android (ticket 26); on iOS BLE pairing runs through Apple's
+  CABTMIDICentralViewController (MidiBluetooth.showSystemDevicePicker)
 
 A backend that implements `MidiNativeTapBackend` next to `MidiBackend`
 calls a native function for an input port on its own receive thread,
