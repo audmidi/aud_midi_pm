@@ -85,9 +85,9 @@
       "name": "dna-plan",
       "package": "dna_plan",
       "ecosystem": "pub",
-      "resolvedVersion": "0.3.0",
+      "resolvedVersion": "0.7.0",
       "via": null,
-      "hash": "0x78d3445b36b4f971"
+      "hash": "0x035d4eaa7ecdcf08"
     },
     {
       "name": "self",
@@ -144,6 +144,26 @@
     {
       "path": ".claude/skills/install/SKILL.md",
       "hash": "0x19025b8a0c2dae09"
+    },
+    {
+      "path": ".claude/skills/plan-intro/SKILL.md",
+      "hash": "0x9abbf1836d0f25e7"
+    },
+    {
+      "path": ".claude/skills/plan-jira-export/SKILL.md",
+      "hash": "0x4d1a1f22434f00fd"
+    },
+    {
+      "path": ".claude/skills/plan-report/SKILL.md",
+      "hash": "0x12871153a93da34c"
+    },
+    {
+      "path": ".claude/skills/plan-requirements/SKILL.md",
+      "hash": "0x49c13077aaea5d83"
+    },
+    {
+      "path": ".claude/skills/plan-schedule/SKILL.md",
+      "hash": "0xa1221150dc0be4d6"
     },
     {
       "path": ".claude/skills/readme/SKILL.md",
@@ -282,8 +302,12 @@
       "hash": "0x013a9b22adfd02d2"
     },
     {
+      "path": "doc/guides/jira-export-guide.md",
+      "hash": "0x48b053eafadc79c9"
+    },
+    {
       "path": "doc/guides/pm-repo-guide.md",
-      "hash": "0x96d9197fc1381a75"
+      "hash": "0xf0332e5ca3268cc1"
     },
     {
       "path": "doc/guides/readme-dna-guide.md",
@@ -292,6 +316,18 @@
     {
       "path": "doc/guides/readme-guide.md",
       "hash": "0xd60aef6f3db3af26"
+    },
+    {
+      "path": "doc/guides/report-guide.md",
+      "hash": "0x9006d59fc032b2ed"
+    },
+    {
+      "path": "doc/guides/requirements-guide.md",
+      "hash": "0xff306dfdd78caacf"
+    },
+    {
+      "path": "doc/guides/schedule-guide.md",
+      "hash": "0xa268c1affbd84498"
     },
     {
       "path": "doc/guides/test-guide-dart.md",
