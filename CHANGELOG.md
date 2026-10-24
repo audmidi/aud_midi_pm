@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.1 - 2026-10-24
 
 ### Changed
 
@@ -21,7 +21,6 @@
 - Add the Bluetooth results to native-001
 
 - The GO:KEYS over USB and BLE; the app as a BLE peripheral as open work
-
 
 ## 0.0.1 - 2026-10-07
 
