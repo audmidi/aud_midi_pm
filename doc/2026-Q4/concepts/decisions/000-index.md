@@ -13,4 +13,4 @@
 | [web-001](web-001.md) | accepted | 2026-10-06 | Web MIDI port ids and permissions | Firefox, Edge |
 | [native-001](native-001.md) | accepted | 2026-10-12 | Backends hand input to a native tap on their receive thread (CoreMIDI, Android) | Linux, Windows and network taps; native send; USB/BLE with hardware |
 | [ports-001](ports-001.md) | accepted | 2026-10-12 | Consumers find a re-plugged port by its fingerprint; ids stay per session | Identical devices without serial numbers; CoreMIDI ids with USB hardware |
-| [state-001](state-001.md) | accepted | 2026-10-27 | Note cells are stacks of velocity slots; the state matrices chain through `midiOut` | Channel mode messages (CC 120, 121, 123), MIDI 2.0 messages |
+| [state-001](state-001.md) | accepted | 2026-10-27 | Note cells are stacks of velocity slots; the state matrices chain through `midiOut` | Reset All Controllers (CC 121), source-aware release, MIDI 2.0 messages |

@@ -38,7 +38,10 @@ The new package is pure Dart and depends on `aud_midi_standard` only
 
 - 16 channels × 128 notes. Every cell holds velocity slots, initially
   five (`initialSlots`), value 0 means free. When all slots of a cell are
-  taken, the cell doubles its slots.
+  taken, the cell doubles its slots, up to `maxSlots` (default 10). A
+  full cell counts no further Note On: the newest velocity replaces the
+  slot filled last, so a stream of Note Ons without Note Offs cannot
+  grow the matrix.
 - A cell is a stack: a Note On writes its velocity into the first free
   slot, a Note Off frees the slot filled last. Occupied slots are always
   contiguous from the front, the first free slot is always `count`
@@ -56,8 +59,13 @@ The new package is pure Dart and depends on `aud_midi_standard` only
   `aud_midi_standard`: an entry joins when a cell goes from 0 to 1 and
   leaves when it goes from 1 to 0. `velocities`, `slots`, `count` and
   `isActive` read a cell.
-- `reset()` clears silently, `releaseAll()` sends a Note Off for every
-  active note and clears.
+- `reset()` clears silently; `release(channel:, note:)`,
+  `releaseChannel(channel)` and `releaseAll()` send a Note Off for every
+  held note in their scope and free the cells, so the app can end notes
+  whose Note Off will never arrive.
+- All Sound Off (CC 120), All Notes Off (CC 123) and the mode messages
+  that imply All Notes Off (CC 124 to 127) release the held notes of
+  their channel the same way and pass through after the Note Offs.
 
 The sending rules per cell, `n` is the number of occupied slots before
 the message:
@@ -107,8 +115,12 @@ of a repo of their own, and the entries of the controller matrix are
 
 Still open, for later tickets:
 
-- All Notes Off (CC 123), All Sound Off (CC 120) and Reset All
-  Controllers (CC 121) are stored or forwarded like any message; the
-  matrices do not interpret them.
+- Reset All Controllers (CC 121) is stored like any value; the
+  controller matrix does not interpret it.
+- Stuck notes beyond the channel mode messages and the release hooks:
+  remember the source of every held note (`midiIn(messages, source:)`,
+  `releaseSource(source)`) so that a vanished port or touch session
+  releases only its own notes, and an optional time limit driven by the
+  app (`sweep(now)`, `maxHold` per channel).
 - MIDI 2.0 channel voice messages (`MidiNoteOn2`, `MidiControlChange2`,
   …) are passed through; translate them with `toMidi1()` first.

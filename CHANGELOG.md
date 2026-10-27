@@ -5,10 +5,15 @@
 ### Changed
 
 - Plan aud_midi_02: the note and controller state matrices
-  - Plan file of ticket aud_midi_02
-  - Decision state-001: note cells are stacks of velocity slots
-  - Architecture row and package graph entry for aud_midi_state_matrix
-  - Shared types MidiKey and MidiMessageCallback go to aud_midi_standard
+- Plan file of ticket aud_midi_02
+- Decision state-001: note cells are stacks of velocity slots
+- Architecture row and package graph entry for aud_midi_state_matrix
+- Shared types MidiKey and MidiMessageCallback go to aud_midi_standard
+- Record the slot cap and release paths of the note matrix
+
+Plan and state-001: a cell counts at most maxSlots (10) Note Ons
+Plan and state-001: release hooks and channel mode messages end held notes
+Open work: source-aware release and an app-driven time limit
 
 ## 0.1.1 - 2026-10-24
 
