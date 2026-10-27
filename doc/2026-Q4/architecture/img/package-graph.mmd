@@ -2,6 +2,7 @@ flowchart BT
   standard[aud_midi_standard<br/>zero dependencies]
   core[aud_midi_core] --> standard
   rtp[aud_midi_rtp<br/>RFC 6295] --> standard
+  state[aud_midi_state_matrix<br/>note and controller state] --> standard
   network[aud_midi_network] --> core & rtp
   apple[aud_midi_apple] --> core
   android[aud_midi_android] --> core

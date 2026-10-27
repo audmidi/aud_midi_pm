@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Plan aud_midi_02: the note and controller state matrices
+
+Plan file of ticket aud_midi_02
+Decision state-001: note cells are stacks of velocity slots
+Architecture row and package graph entry for aud_midi_state_matrix
+Shared types MidiKey and MidiMessageCallback go to aud_midi_standard
+
 ## 0.1.1 - 2026-10-24
 
 ### Changed
@@ -21,6 +32,7 @@
 - Add the Bluetooth results to native-001
 
 - The GO:KEYS over USB and BLE; the app as a BLE peripheral as open work
+
 
 ## 0.0.1 - 2026-10-07
 
