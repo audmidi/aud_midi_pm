@@ -6,7 +6,7 @@
 
 {
   "name": "aud_midi_pm",
-  "summary": "Project management repository of the Audanika MIDI packages: plans, decisions and blog posts. No code.",
+  "summary": "Project management repository of the Audanika MIDI packages: goals, requirements, plans, decisions and architecture. No code.",
   "domain": [
     "Project management of the aud_midi family"
   ],
