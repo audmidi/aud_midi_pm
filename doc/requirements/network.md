@@ -16,7 +16,7 @@ with the user on 2026-10-27 in ticket aud_midi_03.
   topic `scenarios`, join a session over Wi-Fi; decision network-001
 - Acceptance:
   - a session with Audio MIDI Setup on a Mac exchanges notes in both
-    directions from Android, Windows and Linux
+    directions from Android, Windows, Linux, an iPhone and a second Mac
   - a session with rtpMIDI on Windows does the same
 
 ## req-network-002: Losses repaired by the journal

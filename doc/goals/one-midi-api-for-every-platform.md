@@ -16,8 +16,9 @@ platform channels or native code.
 
 - The example app of `aud_midi` builds on all six platforms
 - `hello_midi` exchanges MIDI with a real or virtual port on each of them
-- Every transport of the transport matrix is verified on at least one
-  platform with real devices
+- Every transport of the
+  [composition per platform](../2026-Q4/architecture/architecture.md#composition-per-platform)
+  is verified on at least one platform with real devices
 
 ## Requirements
 

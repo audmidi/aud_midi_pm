@@ -42,20 +42,24 @@ diagnostics and the backend contract. Accepted with the user on
   decision scheduling-001
 - Acceptance: `midi_bench` with 500 scheduled messages and a busy app
   isolate reports arrival minus due time under 1 ms at p99 on macOS,
-  iOS, Android and Linux, under 5 ms at p99 on Windows without Windows
-  MIDI Services and on the web
+  iOS, Android 10 and later, Linux and Windows with Windows MIDI
+  Services, and under 5 ms at p99 on Windows without them, on Android
+  before 10 and on the web, where background tabs throttle timers
 
 ## req-engine-004: Cancel until shortly before due
 
 - Status: accepted
 - Priority: should
-- Statement: A scheduled message can be cancelled until 100 ms before its
-  due time, and cancelling an output drops every message pending for it
+- Statement: On every platform but the web, a scheduled message can be
+  cancelled until 100 ms before its due time, and cancelling an output
+  drops every message pending for it; on the web, messages go to the
+  browser at once and cannot be cancelled
 - Why: [timing a busy app cannot disturb](../goals/timing-a-busy-app-cannot-disturb.md),
   topic `scenarios`, play a sequence while the UI is busy;
   decision scheduling-001
 - Acceptance:
-  - a note scheduled 1 s ahead and cancelled after 500 ms never arrives
+  - on macOS, iOS, Android, Windows and Linux a note scheduled 1 s ahead
+    and cancelled after 500 ms never arrives
   - after cancelling the output, no scheduled message arrives
 
 ## req-engine-005: Losses are diagnostics
@@ -84,20 +88,15 @@ diagnostics and the backend contract. Accepted with the user on
 - Acceptance: a loopback receiver sees All Notes Off and All Sound Off
   on all 16 channels after a panic and no scheduled note afterwards
 
-## req-engine-007: One contract and a fake backend
+## req-engine-007: One contract for every backend
 
 - Status: accepted
 - Priority: must
-- Statement: Every backend fulfils one contract proven by shared tests,
-  and a fake backend with scripted ports and messages lets apps and
-  packages test without hardware
-- Why: [building blocks for other MIDI software](../goals/building-blocks-for-other-midi-software.md),
-  [verified on real devices](../goals/verified-on-real-devices.md),
+- Statement: Every backend fulfils one contract proven by shared tests
+- Why: [verified on real devices](../goals/verified-on-real-devices.md),
   topic `scenarios`, test without hardware
-- Acceptance:
-  - the contract tests run against the fake backend and every platform
-    backend
-  - the example app has a test that runs on the fake backend
+- Acceptance: the contract tests run against every platform backend and
+  against the fake backend
 
 ## req-engine-008: Any message to any port
 
@@ -161,3 +160,28 @@ diagnostics and the backend contract. Accepted with the user on
 - Acceptance: a UMP input that carries JR timestamps delivers messages
   with the spacing the timestamps encode, not the spacing of their
   arrival
+
+## req-engine-013: A fake backend for tests
+
+- Status: accepted
+- Priority: must
+- Statement: A fake backend with scripted ports and messages lets apps
+  and packages test without hardware
+- Why: [building blocks for other MIDI software](../goals/building-blocks-for-other-midi-software.md),
+  topic `scenarios`, test without hardware
+- Acceptance:
+  - the example app has a test that runs on the fake backend
+  - a test scripts a port that appears, delivers messages and vanishes,
+    without hardware
+
+## req-engine-014: Delivery within a millisecond
+
+- Status: accepted
+- Priority: must
+- Statement: A round trip from the app through a virtual port and back
+  to the app completes within 1 ms at p99
+- Why: [timing a busy app cannot disturb](../goals/timing-a-busy-app-cannot-disturb.md),
+  topic `scenarios`, plug in a USB keyboard
+- Acceptance: `midi_bench` reports the round trip through virtual
+  endpoints to the app isolate under 1 ms at p99 on every platform with
+  virtual ports

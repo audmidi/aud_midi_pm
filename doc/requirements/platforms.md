@@ -39,16 +39,15 @@ The backends behind it are decisions, see the architecture.
 
 - Status: accepted
 - Priority: must
-- Statement: On Windows 10 and later the app uses USB and paired
-  Bluetooth LE MIDI and network sessions; where Windows MIDI Services
-  are present, also UMP, virtual devices and Bluetooth LE pairing from
-  the app
+- Statement: On Windows 10 and later the app uses USB, Bluetooth LE MIDI
+  paired from the app or in the operating system, and network sessions;
+  where Windows MIDI Services are present, also UMP and virtual devices
 - Why: [one MIDI API for every platform](../goals/one-midi-api-for-every-platform.md),
   [verified on real devices](../goals/verified-on-real-devices.md),
   topic `scenarios`, plug in a USB keyboard
 - Acceptance:
   - the example app built and run on a Windows machine plays a USB
-    keyboard
+    keyboard and a Bluetooth LE keyboard paired from the app
   - with Windows MIDI Services installed, the app detects them at
     runtime and shows a virtual device to another app
 
@@ -57,10 +56,10 @@ The backends behind it are decisions, see the architecture.
 - Status: accepted
 - Priority: must
 - Statement: On Linux with the ALSA sequencer the app uses the ports of
-  the sequencer, USB, other apps and the PipeWire and JACK bridges,
-  virtual ports created at runtime, Bluetooth LE over BlueZ and network
-  sessions advertised over Avahi; UMP on kernel 6.5 with alsa-lib 1.2.10
-  and later
+  the sequencer, USB, other apps and the audio servers bridged into it,
+  virtual ports created at runtime, Bluetooth LE and network sessions
+  advertised on the local network; UMP on kernel 6.5 with alsa-lib
+  1.2.10 and later
 - Why: [one MIDI API for every platform](../goals/one-midi-api-for-every-platform.md),
   [verified on real devices](../goals/verified-on-real-devices.md),
   topic `scenarios`, plug in a USB keyboard

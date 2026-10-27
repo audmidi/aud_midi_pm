@@ -14,7 +14,8 @@ code or an isolate.
 
 ## Measure
 
-- `aud_midi_standard` and `aud_midi_rtp` depend on the Dart SDK only
+- `aud_midi_standard` depends on the Dart SDK only, `aud_midi_rtp` on
+  `aud_midi_standard` alone
 - Every package of the family is usable and tested without the umbrella
   `aud_midi`
 - At least one project outside the family uses a package of the family
@@ -28,10 +29,10 @@ code or an isolate.
 - [req-constraints-007: Usable in closed-source apps](../requirements/constraints.md#req-constraints-007-usable-in-closed-source-apps)
 - [req-constraints-008: Semantic versions and a changelog](../requirements/constraints.md#req-constraints-008-semantic-versions-and-a-changelog)
 - [req-constraints-009: Published on pub.dev](../requirements/constraints.md#req-constraints-009-published-on-pubdev)
-- [req-engine-007: One contract and a fake backend](../requirements/engine.md#req-engine-007-one-contract-and-a-fake-backend)
+- [req-constraints-010: Thin dependencies of the building blocks](../requirements/constraints.md#req-constraints-010-thin-dependencies-of-the-building-blocks)
+- [req-engine-013: A fake backend for tests](../requirements/engine.md#req-engine-013-a-fake-backend-for-tests)
 - [req-messages-001: All MIDI 1.0 messages typed](../requirements/messages.md#req-messages-001-all-midi-10-messages-typed)
 - [req-messages-003: Byte stream codec](../requirements/messages.md#req-messages-003-byte-stream-codec)
 - [req-messages-007: Constants by name](../requirements/messages.md#req-messages-007-constants-by-name)
 - [req-messages-008: Models without the runtime](../requirements/messages.md#req-messages-008-models-without-the-runtime)
 - [req-network-006: RTP-MIDI as a codec of its own](../requirements/network.md#req-network-006-rtp-midi-as-a-codec-of-its-own)
-- [req-state-006: Chainable in pure Dart](../requirements/state.md#req-state-006-chainable-in-pure-dart)

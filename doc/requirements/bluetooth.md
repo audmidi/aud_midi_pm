@@ -9,16 +9,18 @@ app as a peripheral, timestamps and reconnects. Accepted with the user on
 - Status: accepted
 - Priority: must
 - Statement: The app scans for Bluetooth LE MIDI devices, connects to
-  them and uses them as ports on iOS, macOS, Android and Linux; on
-  Windows a device paired from the app or in the operating system
-  appears as a port
+  them and uses them as ports: from the app on iOS 16, macOS 13, Android
+  and Linux, through the Bluetooth MIDI picker of the system on older
+  iOS and macOS versions; on Windows a device paired from the app or in
+  the operating system appears as a port
 - Why: [one MIDI API for every platform](../goals/one-midi-api-for-every-platform.md),
   topic `scenarios`, connect a Bluetooth LE keyboard
 - Acceptance:
-  - a BLE-MIDI keyboard connects and plays on iOS, macOS, Android and
-    Linux
-  - on Windows a keyboard paired in the operating system appears as a
-    port and plays
+  - a BLE-MIDI keyboard connects from the app and plays on iOS 16,
+    macOS 13, Android and Linux
+  - on iOS 15 the keyboard connects through the system picker and plays
+  - on Windows a keyboard paired from the app or in the operating system
+    appears as a port and plays
 
 ## req-bluetooth-002: The app as a Bluetooth LE peripheral
 

@@ -33,4 +33,5 @@ building or blocking work in the app never delays it.
 - [req-engine-006: Panic silences an output](../requirements/engine.md#req-engine-006-panic-silences-an-output)
 - [req-engine-009: One package clock](../requirements/engine.md#req-engine-009-one-package-clock)
 - [req-engine-010: Bursts without loss](../requirements/engine.md#req-engine-010-bursts-without-loss)
+- [req-engine-014: Delivery within a millisecond](../requirements/engine.md#req-engine-014-delivery-within-a-millisecond)
 - [req-network-005: Timestamps over the network](../requirements/network.md#req-network-005-timestamps-over-the-network)

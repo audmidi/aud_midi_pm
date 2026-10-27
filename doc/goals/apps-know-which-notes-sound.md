@@ -26,6 +26,6 @@ finger lifts.
 - [req-state-003: Retrigger per channel](../requirements/state.md#req-state-003-retrigger-per-channel)
 - [req-state-004: Release all and reset](../requirements/state.md#req-state-004-release-all-and-reset)
 - [req-state-005: The controller matrix keeps the last value](../requirements/state.md#req-state-005-the-controller-matrix-keeps-the-last-value)
-- [req-state-006: Chainable in pure Dart](../requirements/state.md#req-state-006-chainable-in-pure-dart)
+- [req-state-006: Chainable between inputs and outputs](../requirements/state.md#req-state-006-chainable-between-inputs-and-outputs)
 - [req-state-007: Channel mode messages](../requirements/state.md#req-state-007-channel-mode-messages)
 - [req-state-008: MIDI 2.0 notes and controllers](../requirements/state.md#req-state-008-midi-20-notes-and-controllers)

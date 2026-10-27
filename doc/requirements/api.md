@@ -70,7 +70,7 @@ What the app-facing API of `aud_midi` must do. Accepted with the user on
 - Status: accepted
 - Priority: should
 - Statement: Any isolate of the app, a worker next to the UI, uses MIDI
-  through a proxy of its own, attached with a sendable connector
+  through the same API as the main isolate
 - Why: [timing a busy app cannot disturb](../goals/timing-a-busy-app-cannot-disturb.md),
   topic `scenarios`, play a sequence while the UI is busy;
   decision isolate-001

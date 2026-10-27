@@ -8,8 +8,9 @@ active since 2026-Q4
 
 What the family claims for a platform holds on real devices there, not
 only in Dart logic and loopbacks on the developer's Mac. App developers
-can rely on the transport matrix without re-testing each platform
-themselves.
+can rely on the
+[composition per platform](../2026-Q4/architecture/architecture.md#composition-per-platform)
+without re-testing each platform themselves.
 
 ## Measure
 
@@ -22,7 +23,7 @@ themselves.
 ## Requirements
 
 - [req-constraints-004: Checks green on three operating systems](../requirements/constraints.md#req-constraints-004-checks-green-on-three-operating-systems)
-- [req-engine-007: One contract and a fake backend](../requirements/engine.md#req-engine-007-one-contract-and-a-fake-backend)
+- [req-engine-007: One contract for every backend](../requirements/engine.md#req-engine-007-one-contract-for-every-backend)
 - [req-platforms-001: iOS and macOS](../requirements/platforms.md#req-platforms-001-ios-and-macos)
 - [req-platforms-002: Android](../requirements/platforms.md#req-platforms-002-android)
 - [req-platforms-003: Windows](../requirements/platforms.md#req-platforms-003-windows)

@@ -6,6 +6,10 @@
 
 - Add the goals and requirements of the family
 
+### Fixed
+
+- Fix the review findings of the goals and requirements
+
 ## 0.1.1 - 2026-10-24
 
 ### Changed

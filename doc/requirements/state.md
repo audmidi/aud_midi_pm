@@ -80,21 +80,17 @@ and in decision state-001.
   - resetting the channel makes the value unset again
   - the messages reach the callback unchanged and in order
 
-## req-state-006: Chainable in pure Dart
+## req-state-006: Chainable between inputs and outputs
 
 - Status: accepted
 - Priority: must
 - Statement: Both matrices take messages in and hand them to a callback,
-  so they sit anywhere in a chain between inputs and outputs, in pure
-  Dart with `aud_midi_standard` as their only dependency
+  so they sit anywhere in a chain between inputs and outputs
 - Why: [apps know which notes sound](../goals/apps-know-which-notes-sound.md),
-  [building blocks for other MIDI software](../goals/building-blocks-for-other-midi-software.md),
   topic `scenarios`, merge two inputs into one output
 - Acceptance:
   - the example chains the note matrix, the controller matrix and an
     output
-  - the pubspec of `aud_midi_state_matrix` lists `aud_midi_standard` as
-    its only dependency
   - every input call that produces messages calls the callback once
     with all of them in order
 
