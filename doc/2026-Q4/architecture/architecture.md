@@ -7,7 +7,7 @@ the decisions are in [concepts/decisions](../concepts/decisions/000-index.md).
 
 ## Packages
 
-Ten packages, one repo each in `github.com/audmidi`. Diagram:
+Eleven packages, one repo each in `github.com/audmidi`. Diagram:
 [img/package-graph.mmd](img/package-graph.mmd).
 
 | Package | Role | Native code | Depends on |
@@ -15,6 +15,7 @@ Ten packages, one repo each in `github.com/audmidi`. Diagram:
 | `aud_midi_standard` | MIDI 1.0 / 2.0 as data: messages, `MidiBytes`, `Ump`, byte and UMP codecs, translation, BLE-MIDI framing, constants, models | none | nothing |
 | `aud_midi_core` | contracts (`MidiBackend` & co.), clock, `MidiEngine`, composite and BLE backends, `FakeMidiBackend` | none | standard |
 | `aud_midi_rtp` | RFC 6295 payload and complete recovery journal, codec only | none | standard |
+| `aud_midi_state_matrix` | matrices of the sounding notes (velocity slots, retrigger per channel) and the current controller values, chained through `midiOut` (ticket aud_midi_02) | none | standard |
 | `aud_midi_network` | AppleMIDI and Network MIDI 2.0 sessions over UDP, mDNS browsing, session backend | none | standard, core, rtp, `multicast_dns`, `crypto` |
 | `aud_midi_apple` | CoreMIDI, `MIDINetworkSession`, CoreBluetooth, Bonjour | C shim + generated ObjC, via hook | standard, core, `objective_c`, `ffi` |
 | `aud_midi_android` | `android.media.midi` via jnigen, AMidi via FFI | Java shim (Gradle plugin) | standard, core, `jni` |
@@ -77,6 +78,7 @@ flowchart TB
 | standard | VM, Chrome (dart2js), Wasm | – |
 | core | VM, Chrome | – |
 | rtp | VM, lossy-channel property tests | Apple driver interop |
+| state_matrix | VM (ticket aud_midi_02) | – |
 | network | localhost UDP, lossy proxy | Apple driver and Windows MIDI Services interop, IPv6 |
 | apple | macOS loopback, iOS simulator | BLE hardware |
 | android | emulator API 36, release build with R8 | USB/BLE hardware, API < 33 |

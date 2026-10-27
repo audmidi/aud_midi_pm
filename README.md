@@ -37,4 +37,5 @@ One file per area, IDs `req-<area>-<nnn>`.
 - [Architecture](doc/2026-Q4/architecture/architecture.md)
 - [Scenarios: the people and the main scenarios of the family](doc/2026-Q4/concepts/topics/scenarios.md)
 - [Plan aud_midi_01: initial MIDI implementation](doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md)
+- [Plan aud_midi_02: track active notes](doc/2026-Q4/tickets/2026-10-27-aud_midi_02-track-active-notes.md)
 - [References: specifications and reference implementations](doc/references/README.md)
