@@ -10,10 +10,9 @@
 - Architecture row and package graph entry for aud_midi_state_matrix
 - Shared types MidiKey and MidiMessageCallback go to aud_midi_standard
 - Record the slot cap and release paths of the note matrix
-
-Plan and state-001: a cell counts at most maxSlots (10) Note Ons
-Plan and state-001: release hooks and channel mode messages end held notes
-Open work: source-aware release and an app-driven time limit
+- Plan and state-001: a cell counts at most maxSlots (10) Note Ons
+- Plan and state-001: release hooks and channel mode messages end held notes
+- Open work: source-aware release and an app-driven time limit
 
 ## 0.1.1 - 2026-10-24
 
