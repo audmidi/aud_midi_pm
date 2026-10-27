@@ -8,7 +8,7 @@ and in decision state-001.
 
 ## req-state-001: The note matrix counts Note Ons
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: The note matrix keeps, per channel and note, every open Note
   On with its velocity, so an app reads which notes sound and how often
@@ -22,7 +22,7 @@ and in decision state-001.
 
 ## req-state-002: Clean Note On and Note Off output
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: In front of an output the note matrix sends a Note On only
   when a note starts to sound and a Note Off only when the last Note On
@@ -38,7 +38,7 @@ and in decision state-001.
 
 ## req-state-003: Retrigger per channel
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: Per channel the app chooses whether a repeated Note On of a
   sounding note retriggers it, a Note Off and then the new Note On, or is
@@ -53,7 +53,7 @@ and in decision state-001.
 
 ## req-state-004: Release all and reset
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: On request the note matrix sends a Note Off for every
   sounding note and clears, or clears silently
@@ -66,7 +66,7 @@ and in decision state-001.
 
 ## req-state-005: The controller matrix keeps the last value
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: The controller matrix keeps the last value of every
   controller per channel, unset until a value arrives, lists the values
@@ -82,7 +82,7 @@ and in decision state-001.
 
 ## req-state-006: Chainable between inputs and outputs
 
-- Status: accepted
+- Status: done
 - Priority: must
 - Statement: Both matrices take messages in and hand them to a callback,
   so they sit anywhere in a chain between inputs and outputs

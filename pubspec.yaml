@@ -9,7 +9,7 @@ environment:
   sdk: ^3.12.2
 
 dev_dependencies:
-  dna_audanika: ^0.0.2
+  dna_audanika: ^0.1.0
   dna_plan: ^1.0.0
   helix: ^1.14.0
   lints: ^6.1.0

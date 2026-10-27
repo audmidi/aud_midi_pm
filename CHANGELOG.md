@@ -13,6 +13,7 @@
 - Plan and state-001: a cell counts at most maxSlots (10) Note Ons
 - Plan and state-001: release hooks and channel mode messages end held notes
 - Open work: source-aware release and an app-driven time limit
+- Upgrade the DNA, add the post and the German plan files
 
 ## 0.2.0 - 2026-10-27
 

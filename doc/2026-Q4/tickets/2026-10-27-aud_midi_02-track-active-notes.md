@@ -14,10 +14,12 @@ callback.
 
 ## Requirements
 
-The project management repo keeps no requirements yet
-(`doc/requirements` does not exist). The ticket rests on the
-specification the user gave while planning; engineering the requirements
-of the family is a follow-up.
+Engineered in ticket aud_midi_03 and kept in
+[requirements/state.md](../../requirements/state.md). This ticket fulfils
+req-state-001 to req-state-006 and the note matrix part of req-state-007
+(All Sound Off, All Notes Off and the mode messages that imply it). Still
+open: Reset All Controllers in the controller matrix (req-state-007) and
+MIDI 2.0 notes and controllers (req-state-008).
 
 ## Affected repos
 
