@@ -1,12 +1,12 @@
 name: aud_midi_pm
 description: "Project management repo of the Audanika MIDI packages: plans, decisions, blog posts"
-version: 0.3.0
+version: 0.4.0
 homepage: https://github.com/audmidi/aud_midi_pm
 repository: https://github.com/audmidi/aud_midi_pm
 publish_to: none
 
 environment:
-  sdk: ^3.12.2
+  sdk: ^3.13.0
 
 dev_dependencies:
   dna_audanika: ^0.1.0

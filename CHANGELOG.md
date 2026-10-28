@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0 - 2026-10-28
+
+### Changed
+
+- Require Dart 3.13
+
+- Add the blog post of this change, in English and German
+
+- Bring the README to the README template, in English and German
+
+- Upgrade the dependencies published since the first pass
+
+- Lift the lock file to the newest resolvable versions
+
 ## 0.3.0 - 2026-10-27
 
 ### Changed
