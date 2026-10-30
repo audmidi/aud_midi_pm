@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Plan MidiNote and ChannelVelocity
+
 ## 0.4.0 - 2026-10-28
 
 ### Changed
@@ -13,6 +19,7 @@
 - Upgrade the dependencies published since the first pass
 
 - Lift the lock file to the newest resolvable versions
+
 
 ## 0.3.0 - 2026-10-27
 
@@ -60,6 +67,7 @@
 - Add the Bluetooth results to native-001
 
 - The GO:KEYS over USB and BLE; the app as a BLE peripheral as open work
+
 
 ## 0.0.1 - 2026-10-07
 

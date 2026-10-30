@@ -106,3 +106,19 @@ ticket aud_midi_03.
   topic `scenarios`, test without hardware
 - Acceptance: a Dart program that depends on `aud_midi_standard` alone
   constructs a port, a device and a diagnostic and compares them by value
+
+## req-messages-009: Notes and voices as values
+
+- Status: accepted
+- Priority: must
+- Statement: A note, its channel, note number and velocity, and a voice, a
+  channel and a velocity, exist as immutable values that compare by value
+- Why: [apps know which notes sound](../goals/apps-know-which-notes-sound.md),
+  topic `scenarios`, notes that several inputs play; ticket
+  midi_note_and_json_parsing
+- Acceptance:
+  - a Dart program that depends on `aud_midi_standard` alone creates a
+    `MidiNote` from a `ChannelVelocity` and a note number, reads its
+    `MidiKey` and compares two notes by value
+  - `MidiNote` and `ChannelVelocity` survive `toJson` and `fromJson`
+    unchanged
