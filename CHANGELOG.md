@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.1 - 2026-10-30
+
+### Added
+
+- Add the blog post of the plan
+
+### Changed
+
+- Plan MidiNote and ChannelVelocity
+
 ## 0.4.0 - 2026-10-28
 
 ### Changed

@@ -29,3 +29,4 @@ finger lifts.
 - [req-state-006: Chainable between inputs and outputs](../requirements/state.md#req-state-006-chainable-between-inputs-and-outputs)
 - [req-state-007: Channel mode messages](../requirements/state.md#req-state-007-channel-mode-messages)
 - [req-state-008: MIDI 2.0 notes and controllers](../requirements/state.md#req-state-008-midi-20-notes-and-controllers)
+- [req-messages-009: Notes and voices as values](../requirements/messages.md#req-messages-009-notes-and-voices-as-values)
