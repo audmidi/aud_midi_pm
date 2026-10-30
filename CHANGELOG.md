@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- Add the blog post of the plan
+
 ### Changed
 
 - Plan MidiNote and ChannelVelocity
