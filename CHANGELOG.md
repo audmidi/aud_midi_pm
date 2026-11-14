@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 - 2026-11-14
+
+### Changed
+
+- Require Flutter 3.50 and Dart 3.14, build the DNA
+
+### Removed
+
+- Remove a reference to a post of another repo
+
 ## 0.4.1 - 2026-10-30
 
 ### Added
