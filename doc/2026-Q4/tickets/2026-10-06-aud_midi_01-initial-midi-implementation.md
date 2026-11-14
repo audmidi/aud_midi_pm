@@ -30,7 +30,7 @@ no global prettier/markdownlint (the editor formats on save).
 ## Conventions that shape the post
 
 - Audanika posts: HTML license comment, `# Title`, `##` sections, no front
-  matter. Planning model (aud_pm `08 Visualize tone selections.md`):
+  matter. Planning model:
   `## Goals` … `## Plan` with `### Decisions`, `### Structure`, `### Steps`,
   `### Verification`. ggdna template adds `## Open Points`. The post merges
   both: Goals / overview sections / Concept / Plan / Open Points.

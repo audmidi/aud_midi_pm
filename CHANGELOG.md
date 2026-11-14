@@ -6,6 +6,10 @@
 
 - Require Flutter 3.50 and Dart 3.14, build the DNA
 
+### Removed
+
+- Remove a reference to a post of another repo
+
 ## 0.4.1 - 2026-10-30
 
 ### Added
